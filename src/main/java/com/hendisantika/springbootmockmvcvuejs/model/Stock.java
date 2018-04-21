@@ -97,12 +97,12 @@ public class Stock {
         return result;
     }
 
-//    public Stock clone() {
-//        Stock s = new Stock();
-//        s.setId(this.id);
-//        s.setName(this.name);
-//        s.setLastUpdate(this.getLastUpdate());
-//        return s;
-//    }
+    public Stock clone() {
+        Stock s = new Stock();
+        s.setId(this.id);
+        s.setName(this.name);
+        s.setLastUpdate(this.getLastUpdate());
+        return s;
+    }
 
 }
