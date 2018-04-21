@@ -32,6 +32,11 @@ public class StockController {
         this.stockService = stockService;
     }
 
+    @GetMapping("/")
+    public String list() {
+        return "stocklist";
+    }
+
     @GetMapping("/api/v1/stocks")
     public ResponseEntity<Map<Long, Stock>> findAll() {
         return ResponseEntity.ok(stockService.findAll());
