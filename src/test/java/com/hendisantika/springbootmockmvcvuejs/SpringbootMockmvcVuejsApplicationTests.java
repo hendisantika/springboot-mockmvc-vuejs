@@ -13,6 +13,7 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.math.BigDecimal;
@@ -27,6 +28,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
+@WebAppConfiguration
 public class SpringbootMockmvcVuejsApplicationTests {
 
     @Autowired
@@ -34,6 +36,10 @@ public class SpringbootMockmvcVuejsApplicationTests {
 
     @MockBean
     private StockController stockAPI;
+
+    @Test
+    public void contextLoads() {
+    }
 
     @Test
     public void findAll() throws Exception {
